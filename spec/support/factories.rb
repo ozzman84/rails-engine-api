@@ -92,7 +92,7 @@ FactoryBot.define do
   # end
 
   ############### Merchants ##################
-  factory :merchants, class: Merchant do
+  factory :merchant, class: Merchant do
     name { Faker::Name.name}
   end
 end
