@@ -26,7 +26,6 @@ class Api::V1::MerchantsController < ApplicationController
       params[:per_page].to_i
     end
 
-
     # def page_size(size)
     #   size = size&.to_i || 1
     #   size.positive? ? size : 20

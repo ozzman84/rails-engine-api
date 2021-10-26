@@ -5,6 +5,11 @@ Rails.application.routes.draw do
       resources :merchants, only: %i[index show]
       resources :items, only: %i[index show create update destroy]
       get '/merchants/:id/items', to: 'merchant_items#index'
+      get '/items/:id/merchant', to: 'merchant_by_item#show'
+
+      namespace :revenue do
+        resources :merchants, only: :index
+      end
     end
   end
 end

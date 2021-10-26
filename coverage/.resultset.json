@@ -213,6 +213,11 @@
           1,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -381,49 +386,8 @@
           1,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/spec/support/request_spec_helper.rb": {
-        "lines": [
-          1,
           null,
           1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/app/controllers/api/v1/merchants_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
           null,
           null,
           null,
@@ -433,17 +397,108 @@
           null
         ]
       },
-      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/app/serializers/merchant_serializer.rb": {
+      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/spec/support/request_spec_helper.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/app/controllers/concerns/response.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/osmonson/turing/3_mod/projects/rails-engine-api/app/controllers/concerns/exception_handler.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1635124854
+    "timestamp": 1635282007
   }
 }

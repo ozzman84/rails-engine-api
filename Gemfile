@@ -41,6 +41,7 @@ group :development, :test do
   gem 'orderly'
   gem "faker"
   gem "factory_bot_rails"
+  gem 'database_cleaner'
 end
 
 group :development do
