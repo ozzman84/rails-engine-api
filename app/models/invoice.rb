@@ -4,5 +4,15 @@ class Invoice < ApplicationRecord
   has_many :transactions
   has_many :invoice_items
   has_many :items, through: :invoice_items
-  # validates :status, :customer_id, :created_at, :updated_at, presence: true
+
+  validates :status, presence: true
+
+  scope :unshipped_rev, ->(quantity = 10) {
+    joins(:invoice_items)
+    .where(status: 'packaged')
+    .select('invoices.*, SUM(invoice_items.unit_price*invoice_items.quantity) AS potential_revenue')
+    .group(:id)
+    .order(potential_revenue: :desc)
+    .limit(quantity)
+  }
 end

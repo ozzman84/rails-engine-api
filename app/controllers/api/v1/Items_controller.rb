@@ -1,6 +1,6 @@
 class Api::V1::ItemsController < ApplicationController
-  before_action :set_merchant, except: :show
-  before_action :set_merchant_item, only: %i[update destroy]
+  # before_action :set_merchant, except: :show
+  before_action :set_item, only: %i[update destroy]
 
   def index
     items = Item.all.offset(page * per_page).limit(per_page)
@@ -35,12 +35,12 @@ class Api::V1::ItemsController < ApplicationController
     params.require(:item).permit(:name, :description, :unit_price, :merchant_id)
   end
 
-  def set_merchant
-    @merchant = Merchant.find(params[:merchant_id])
-  end
+  # def set_merchant
+  #   @merchant = Merchant.find(params[:merchant_id])
+  # end
 
-  def set_merchant_item
-    @item = @merchant.items.find_by!(id: params[:id]) if @merchant
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def page

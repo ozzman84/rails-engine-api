@@ -4,7 +4,7 @@ RSpec.describe "Items", type: :request do
   describe 'With no Item data' do
     it 'returns empty array' do
       get '/api/v1/items?per_page=20&page=2'
-      
+
       expect(json[:data].size).to eq(0)
       expect(json[:data]).to eq([])
     end
@@ -43,23 +43,23 @@ RSpec.describe "Items", type: :request do
           get '/api/v1/items?'
 
           expect(json[:data].size).to eq(20)
-          expect(item1[:name]).to eq(all_items[0][:name])
+          expect(json[:data][0][:id]).to eq(item1_id.to_s)
         end
 
         it 'fetching page 1 is the same list of first 20 in db' do
           get '/api/v1/items?per_page=20&page=1'
 
           expect(json[:data].size).to eq(20)
-          expect(item1[:name]).to eq(all_items.first.name)
+          expect(json[:data][0][:id]).to eq(item1_id.to_s)
         end
 
-        # it 'fetching page -1 is the same list of first 20 in db' do
-        #   get '/api/v1/items?page=-1'
-        #   items = JSON.parse(response.body, symbolize_names: true)
-        #
-        #   expect(items[:data].count).to eq(20)
-        #   expect(items[:data][0][:id]).to eq(all_items.first.id.to_s)
-        # end
+        it 'fetching page -1 is the same list of first 20 in db' do
+          get '/api/v1/items?page=-1'
+          items = JSON.parse(response.body, symbolize_names: true)
+
+          expect(items[:data].count).to eq(20)
+          expect(items[:data][0][:id]).to eq(all_items.first.id.to_s)
+        end
 
         it 'happy path, fetch second page of 20 items' do
           get '/api/v1/items?per_page=20&page=2'
@@ -90,50 +90,19 @@ RSpec.describe "Items", type: :request do
           expect(response).to be_successful
           expect(item[:data][:id]).to eq(id.to_s)
         end
-
-      describe 'GET one Item' do
-        before { get "/api/v1/items/#{item1_id}" }
-
-        context 'With a valid id' do
-          it 'returns the Item' do
-            expect(json).not_to be_empty
-            expect(json[:data][0][:id]).to eq(item1_id)
-          end
-
-          it 'returns status code 200' do
-            expect(response).to have_http_status(200)
-          end
-        end
-
-        context 'when the record does not exist' do
-          let(:item_id) { all_items.last.id + 1 }
-
-          it 'returns status code 404' do
-            expect(response).to have_http_status(404)
-          end
-
-          it 'returns a not found message' do
-            expect(response.body).to match(/Couldn't find Item/)
-          end
-        end
       end
 
-        # context 'when the record does not exist' do
-        #   let(:item_id) { 100 }
-        #
-        #   it 'returns status code 404' do
-        #     # item = JSON.parse(response.body, symbolize_names: true)
-        #     get "/api/v1/items/#{item_id}"
-        #
-        #     expect(response).to have_http_status(404)
-        #   end
-        #
-        #   it 'returns a not found message' do
-        #     item = JSON.parse(response.body, symbolize_names: true)
-        #
-        #     expect(response.body).to match(/Couldn't find Todo/)
-        #   end
-        # end
+      context 'when the record does not exist' do
+        let(:item_id) { Item.last.id + 1 }
+        before { get "/api/v1/items/#{item_id}" }
+
+        it 'returns status code 404' do
+          expect(response).to have_http_status(404)
+        end
+
+        it 'returns a not found message' do
+          expect(response.body).to match(/Couldn't find Item/)
+        end
       end
 
       describe 'POST /items' do
@@ -145,7 +114,6 @@ RSpec.describe "Items", type: :request do
           merchant_id: merchant.id
           }
         }
-        # let(:headers) { { "CONTENT_TYPE" => "application/json" } }
 
         context 'when the request is valid' do
           before { post '/api/v1/items', params: { item: valid_attributes } }
@@ -162,12 +130,12 @@ RSpec.describe "Items", type: :request do
           context 'when the request is invalid' do
             before { post '/api/v1/items', params: { name: 'Foobar' } }
 
-            xit 'returns status code 422' do
-              expect(response).to have_http_status(422)
+            it 'returns status code 422' do
+              expect(response).to have_http_status(400)
             end
 
-            xit 'returns a validation failure message' do
-              expect(response.body).to match(/Validation failed: Created by can't be blank/)
+            it 'returns a validation failure message' do
+              expect(response.body).to match(/param is missing or the value is empty: item/)
             end
           end
         end
@@ -178,12 +146,8 @@ RSpec.describe "Items", type: :request do
           context 'when the record exists' do
             before { patch "/api/v1/items/#{item1_id}", params: { item: valid_attributes } }
 
-            it 'updates the record' do
-              expect(response.body).to be_empty
-            end
-
             it 'returns status code 204' do
-              expect(response).to have_http_status(204)
+              expect(response).to have_http_status(200)
             end
           end
         end
@@ -191,8 +155,8 @@ RSpec.describe "Items", type: :request do
         describe 'DELETE Item' do
           before { delete "/api/v1/items/#{item1_id}" }
 
-          it 'returns status code 204' do
-            expect(response).to have_http_status(204)
+          it 'returns status code 200' do
+            expect(response).to have_http_status(200)
           end
         end
       end
