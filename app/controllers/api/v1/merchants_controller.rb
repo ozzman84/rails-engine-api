@@ -10,7 +10,6 @@ class Api::V1::MerchantsController < ApplicationController
   end
 
   private
-  #is a singular param stated without the s? param vs params
   def page
     if params[:page].to_i <= 1
       @page = 0
@@ -25,10 +24,5 @@ class Api::V1::MerchantsController < ApplicationController
     else
       params[:per_page].to_i
     end
-
-    # def page_size(size)
-    #   size = size&.to_i || 1
-    #   size.positive? ? size : 20
-    # end
   end
 end

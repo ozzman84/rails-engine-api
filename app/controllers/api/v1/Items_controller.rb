@@ -1,5 +1,4 @@
 class Api::V1::ItemsController < ApplicationController
-  # before_action :set_merchant, except: :show
   before_action :set_item, only: %i[update destroy]
 
   def index
@@ -26,7 +25,6 @@ class Api::V1::ItemsController < ApplicationController
 
   def destroy
     render json: @item.destroy
-    # head :no_content
   end
 
   private
@@ -34,10 +32,6 @@ class Api::V1::ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :description, :unit_price, :merchant_id)
   end
-
-  # def set_merchant
-  #   @merchant = Merchant.find(params[:merchant_id])
-  # end
 
   def set_item
     @item = Item.find(params[:id])
