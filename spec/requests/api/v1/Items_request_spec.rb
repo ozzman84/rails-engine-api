@@ -130,7 +130,7 @@ RSpec.describe "Items", type: :request do
           context 'when the request is invalid' do
             before { post '/api/v1/items', params: { name: 'Foobar' } }
 
-            it 'returns status code 422' do
+            it 'returns status code 400' do
               expect(response).to have_http_status(400)
             end
 
