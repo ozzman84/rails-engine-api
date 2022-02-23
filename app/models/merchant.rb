@@ -27,6 +27,7 @@ class Merchant < ApplicationRecord
 
   scope :total_rev, ->(id) {
     joins(invoices: :transactions)
+    .where(transactions: { result: 'success' })
     .where(id: id)
     .select('merchants.*, SUM(invoice_items.unit_price*invoice_items.quantity) AS revenue')
     .group(:id)

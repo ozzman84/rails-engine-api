@@ -10,6 +10,7 @@ class Api::V1::MerchantsController < ApplicationController
   end
 
   private
+
   def page
     if params[:page].to_i <= 1
       @page = 0

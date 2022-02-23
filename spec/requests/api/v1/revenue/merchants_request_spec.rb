@@ -65,7 +65,7 @@ RSpec.describe 'Revenue', type: :request do
 
     context 'When given a correct query' do
       before { get '/api/v1/revenue/merchants?quantity=10' }
-      
+
       it 'Merchant count matches query' do
         expect(response).to be_successful
         expect(json[:data].size).to eq(6)

@@ -36,7 +36,7 @@ RSpec.describe "Merchants", type: :request do
         get '/api/v1/merchants?per_page=20&page=1'
 
         expect(json[:data].count).to eq(20)
-        expect(json[:data][0][:id]).to eq(all_merch.first.id.to_s)
+        expect(json[:data][0][:id]).to eq(merch1_id.to_s)
       end
 
       it 'fetching page -1 is the same list of first 20 in db' do
@@ -91,7 +91,6 @@ RSpec.describe "Merchants", type: :request do
   describe 'With no Merchant data' do
     it 'returns empty array' do
       get '/api/v1/merchants?per_page=20&page=2'
-      merchants = JSON.parse(response.body, symbolize_names: true)
 
       expect(json[:data].count).to eq(0)
       expect(json[:data]).to eq([])
