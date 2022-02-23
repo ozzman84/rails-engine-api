@@ -1,46 +1,32 @@
-<div id="top"></div>
-
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![LinkedIn][Ozzie-shield]][linkedin-url]
-
-
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+![GitHub last commit](https://img.shields.io/github/last-commit/ozzman84/rails-engine-api)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">project_title</h3>
+  <h2 align="center">Rails Engine API</h2>
 
   <p align="center">
-    project_description
+  You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. Your job is to expose the data that powers the site through an API that the front end will consume.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="#"><strong>Visit the site »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/ozzman84/rails-engine-api/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/ozzman84/rails-engine-api/issues">Request Feature</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="#">Front-end Repo</a>
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
-<details>
+<h2><details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -52,37 +38,66 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#deployment">Deployment</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
-
+</details><h2/>
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+  <p>
+    The Rails Engine API is built with Ruby on Rails using a relational database. Project management was completed using Agile methodologies and scrum ceremonies. As for testing, GitHub Actions was used for continuous integration and continuous deployment with unit testing completed via RSpec and SimpleCov.  
+  </p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 ### Built With
+#### Framework
+<p>
+  <img src="https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white" />
+</p>
 
-* [Ruby on Rails](https://https://rubyonrails.org/)
-* [PostgreSQL](https://https://www.postgresql.org/)
-* [Bootstrap](https://getbootstrap.com)
+#### Languages
+<p>
+  <img src="https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white" />
+  <!-- <img src="https://img.shields.io/badge/-GraphQL-E10098??style=flat&logo=appveyor&logo=graphql&logoColor=white" -->
+</p>
+
+#### Tools
+<p>
+  <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Heroku-430098.svg?&style=flaste&logo=heroku&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?&style=flaste&logo=postgresql&logoColor=white" />
+
+</p>
+
+#### Gems
+<p>
+  <img src="https://img.shields.io/badge/rspec-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
+  <img src="https://img.shields.io/badge/pry-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />  
+  <img src="https://img.shields.io/badge/simplecov-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />  
+  <img src="https://img.shields.io/badge/rubocop-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
+  <img src="https://img.shields.io/badge/shoulda--matchers-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
+  <img src="https://img.shields.io/badge/geocoder-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" /> </br>
+</p>
+
+#### Development Principles
+<p>
+  <img src="https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white" />
+  <img src="https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white" />
+  <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />
+</p>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -91,60 +106,37 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+_Follow the instructions listed below to get the application up and running._
+
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone git@github.com:ozzman84/rails-engine-api.git
    ```
-3. Install NPM packages
+2. Run bundle
    ```sh
-   npm install
+   bundle install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run migrations
+   ```sh
+   rails db:{create,migrate,seed}
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- SCHEMA -->
+## Schema
+
+![D379188F-9790-4DBE-8407-74C158FA88AA](https://user-images.githubusercontent.com/57572826/155251248-bc337e84-189e-41fd-a4ba-fade2d0b8729.jpeg)
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- QUERY/RESPONSE -->
+<!-- ## Query/Response -->
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ozzman84/rails-engine-api/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -163,51 +155,27 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
+<center>
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+| Back-end Team  |<img src="https://img.shields.io/badge/LinkedIn-0077B5??style=flat&logo=appveyor&logo=linkedin&logoColor=white" />|<img src="https://img.shields.io/badge/GitHub-100000??style=flat&logo=appveyor&logo=github&logoColor=white" />|
+| :-------------:| :-------------------------------------------------:|:------------------------------------:|
+| Ozzie Osmonson | [link](https://www.linkedin.com/in/ozzie-osmonson/)|[link](https://github.com/ozzman84)   |
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+<center/>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ozzie-osmonson/
+[contributors-shield]: https://img.shields.io/github/contributors/ozzman84/rails-engine-api.svg??style=flat&logo=appveyor
+[contributors-url]: https://github.com/ozzman84/rails-engine-api/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ozzman84/Best-README-Template.svg??style=flat&logo=appveyor
+[forks-url]: https://github.com/ozzman84/rails-engine-api/network/members
+[stars-shield]: https://img.shields.io/github/stars/ozzman84/rails-engine-api.svg??style=flat&logo=appveyor
+[stars-url]: https://github.com/ozzman84/rails-engine-api/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ozzman84/rails-engine-api.svg??style=flat&logo=appveyor
+[issues-url]: https://github.com/ozzman84/rails-engine-api/issues
+[license-shield]: https://img.shields.io/github/license/ozzman84/rails-engine-api.svg??style=flat&logo=appveyor
 [product-screenshot]: images/screenshot.png
