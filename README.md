@@ -20,8 +20,8 @@
     <a href="https://github.com/ozzman84/rails-engine-api/issues">Report Bug</a>
     ·
     <a href="https://github.com/ozzman84/rails-engine-api/issues">Request Feature</a>
-    ·
-    <a href="#">Front-end Repo</a>
+    <!-- ·
+    <a href="#">Front-end Repo</a> -->
   </p>
 </div>
 
